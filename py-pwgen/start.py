@@ -1,13 +1,16 @@
-from random import randint
 import argparse
 import glob
 import functions as fn
 
+## Init
+
+# arguments
 parser = argparse.ArgumentParser(description='Simple password generator')
 parser.add_argument('--count', type=int, default='5',
                     help='number of password(s) to return')
 args = parser.parse_args()
 
+# var
 wordlists = glob.glob('wordlists//*.txt')
 
 ## Main
